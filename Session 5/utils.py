@@ -3,6 +3,7 @@
 import matplotlib.pyplot as plt
 import torch
 from torchsummary import summary
+from torchvision import transforms
 
 def plot_loss_accuracy(results):
     train_losses, test_losses, train_acc, test_acc = results
@@ -38,3 +39,21 @@ def show_examples_dataset(batch_data, batch_label, n=12):
       plt.title(batch_label[i].item())
       plt.xticks([])
       plt.yticks([])
+      
+      
+def data_transforms(data, mu, sigma):
+
+  if data == 'Train':
+    transform = transforms.Compose([
+                    transforms.RandomApply([transforms.CenterCrop(22), ], p=0.1),
+                    transforms.Resize((28, 28)),
+                    transforms.RandomRotation((-15., 15.), fill=0),
+                    transforms.ToTensor(),
+                    transforms.Normalize((mu), (sigma)),
+                    ])
+  else:
+    transform = transforms.Compose([
+                    transforms.ToTensor(),
+                    transforms.Normalize((mu), (sigma))
+                    ])
+  return transform
