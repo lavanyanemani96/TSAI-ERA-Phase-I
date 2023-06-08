@@ -8,9 +8,14 @@
 1. model.py contains the model class Net(). 
 2. utils.py contains various functions for visualization, information on devices etc. 
 3. S6.ipynb is the notebook that uses model.py and utils.py files for training on MNIST dataset for image classification. 
+4. S6 Excel BackProp.xlsx is the excel sheet with Backprop for a simple NN. 
 
 ## Results 
 1. The loss curves for different learning rates [0.1, 0.2, 0.5, 0.8, 1.0, 2.0] can be seen below. 
 ![Backprop_lr](./backprop_learningrate.png)
+
+This plot is made by using the excel sheet S6 Excel BackProp.xlsx (screenshot shown below). 
+![Backprop_equations](./BackProp_Equations.png)
+
 
 2. S6.ipynb contains the log for training which show we were able to achieve the 99.4% accuracy mark within the 20 epochs. The model.py file shows our modified network which uses less than 20k model parameters, BN and Dropout (with value of 0.1), GAP and ReLU. 
