@@ -14,6 +14,6 @@
 
 ## Results 
 
-Training/Test Accuracy: 65.12%, 75.64%
+Training/Test Accuracy: 77.61%, 85.36%
 ![Loss](./results/Loss.png)
 ![misclassified](./results/misclassified.png)
