@@ -25,10 +25,10 @@
             3. Description: Phi2wrapper is a module that takes the CLIP embeddings and uses a trainable projection layer to convert to Phi-2 embedding space. To do this we limited the captions from the COCO dataset to max of 30 tokens and also use only 1 caption per image to save compute time. The frozen Phi-2 was loaded in float16 to save memory. For training we passed in Phi-2 embedding space: "Image: " + image_embedding from projection layer + "Caption this: " to Phi-2. Using partial feature forcing for the first 3 tokens we trained the model to predict the next word in the caption. 
             4. Logs: The logs for training are present in the notebook. 
     2.Mode: Text 
-        No further training is required for Text input since it can be pushed to embedding space using pre-trained Microsoft-Phi-2. 
+        1. Description: No further training is required for Text input since it can be pushed to embedding space using pre-trained Microsoft-Phi-2. 
     3. Mode: Audio
-        To transcribe an Audio input WhisperX was used. It can very accurately and speedily convert an Audio to Text. After transcribe and processing the format to get a simple text we can treat this mode as equivalent to mode B. (Text)
-        Model: https://github.com/m-bain/whisperX
+        1. Model: https://github.com/m-bain/whisperX
+        2. Description: To transcribe an Audio input WhisperX was used. It can very accurately and speedily convert an Audio to Text. After transcribe and processing the format to get a simple text we can treat this mode as equivalent to mode B. (Text)
     4. Fine-tuning to become a Question-Answer LLM 
         1. Dataset: https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K
         2. Notebook: ./capstone_stage_2_finetune_QLora.ipynb
