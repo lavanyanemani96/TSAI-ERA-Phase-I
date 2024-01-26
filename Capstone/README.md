@@ -49,7 +49,7 @@
 
 4. Areas of improvement / Things to experiment. 
     1. I wanted to test if the embedding from CLIP can directly be trained to map to embedding of Phi-2. So to go from [1, 49, 768] to [1, 49, 2560] without the use of Phi-2. 
-        Notebook: ./capstone_stage_1_test_projectionlayer_direct_CLIP_NN.ipynb
+        Notebook: ![Test 1](./capstone_stage_1_test_projectionlayer_direct_CLIP_NN.ipynb) 
         Description: A simple NN to convert a [1, 49, 768] to [1, 49, 2560]. I tried to run this model but without success. The loss function was cosine distance between the target [1, 49, 2560] and prediction from the NN also of shape [1, 49, 2560]. From preliminary results it looked like this model was too simple and the cosine distance did not reduce below 0.65-ish. 
         ![test_CLIP_NN](./result_graphs/test_CLIP_NN.png)
     2. Often during training, a problem arose that even if the words weren't exactly the same the sentence made semantic sense. So a line of investigation was to test if the loss function can have an element of whether or not the predicted sentence and the target sentence are semantically similar. 
