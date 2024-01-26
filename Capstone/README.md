@@ -8,10 +8,10 @@
 
 ## Results 
 1. Demonstrate training a LLM from scratch 
-    Dataset: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample
-    Model: https://huggingface.co/microsoft/phi-2
-    Notebook: ./capstone_stage_0_train_phi2_scratch.ipynb
-    Description: The notebook shows the logs for training Microsoft's Phi-2 model from scratch using a subset of the togethercomputer/RedPajama-Data-1T-Sample dataset.
+    1. Dataset: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample
+    2. Model: https://huggingface.co/microsoft/phi-2
+    3. Notebook: ./capstone_stage_0_train_phi2_scratch.ipynb
+    4. Description: The notebook shows the logs for training Microsoft's Phi-2 model from scratch using a subset of the togethercomputer/RedPajama-Data-1T-Sample dataset.
 
 2. Build a Multi-Modal (Image, Audio, Text) LLM
 
