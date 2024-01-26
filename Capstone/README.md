@@ -45,7 +45,7 @@
 3. Create a HuggingFace App to use the Multi-Modal LLM 
     1. Notebook: ![Multi-Modal Phi-2](./capstone_stage_2_integrate.ipynb) 
     2. Description: A gradio app to use the built Multi-Modal LLM
-    3. Link: 
+    3. Link: https://huggingface.co/spaces/LN1996/Multi-Modal-Phi2
 
 4. Areas of improvement / Things to experiment. 
     1. I wanted to test if the embedding from CLIP can directly be trained to map to embedding of Phi-2. So to go from [1, 49, 768] to [1, 49, 2560] without the use of Phi-2. 
